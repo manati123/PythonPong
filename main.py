@@ -53,10 +53,10 @@ class PongGame(Widget):
         # score board
         if self.ball.x < self.x:
             self.player2.score += 1
-            self.serve_ball(velocity=(4,0))
+            self.serve_ball(velocity=(-4,0))
         if self.ball.x > self.width:
             self.player1.score += 1
-            self.serve_ball(velocity=(-4,0))
+            self.serve_ball(velocity=(4,0))
     def on_touch_move(self, touch):
         if touch.x < self.width / 3:
             self.player1.center_y = touch.y
